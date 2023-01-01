@@ -1,0 +1,81 @@
+@import "./reset";
+
+$color-orange: hsl(35, 77%, 62%);
+$color-red: hsl(5, 85%, 63%);
+
+$color-white: hsl(36, 100%, 99%);
+
+$color-gray-blue: hsl(233, 8%, 79%);
+$color-gray-blue--dark: hsl(236, 13%, 42%);
+$color-dark-blue: hsl(240, 100%, 5%);
+
+@mixin flex-col($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==tablet {
+    @media only screen and (min-width: 48em) {
+      @content;
+    }
+  }
+  @if $breakpoint==laptop {
+    @media only screen and (min-width: 64em) {
+      @content;
+    }
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: $color-white;
+  color: $color-dark-blue;
+}
+
+.paragraph {
+  font-size: 93.75%; // 15px
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1;
+
+  @include respond(laptop) {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+.container {
+  max-width: 704px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include respond(laptop) {
+    max-width: 1170px;
+    padding: 5em 0.5em;
+  }
+}
+
+.main {
+  padding: 0 1em 0.25em;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 4em;
+
+  @include respond(laptop) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2em;
+  }
+}
+
+@import "./header";
+@import "./hero";
+@import "./news";
+@import "./featured";
