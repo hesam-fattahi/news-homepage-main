@@ -4,7 +4,7 @@
 
   h2 {
     color: $color-orange;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
   .item-heading {
     font-weight: 700;
@@ -21,14 +21,19 @@
   }
 
   &__list {
-    @include flex-col(2em);
+    @include flex-col(0);
   }
 
-  hr {
+  &__item {
+    border-bottom: 1px solid $color-gray-blue--dark;
+    padding: 2em 0;
+  }
+  &__item:last-child {
     border: none;
-    height: 1px;
-    width: 100%;
-    margin: 0 auto;
-    background-color: $color-gray-blue--dark;
+    padding-bottom: 0;
+  }
+
+  &__item:first-child {
+    padding-top: 0;
   }
 }

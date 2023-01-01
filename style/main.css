@@ -267,7 +267,7 @@ h2 {
 }
 .news h2 {
   color: hsl(35deg, 77%, 62%);
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 .news .item-heading {
   font-weight: 700;
@@ -283,14 +283,18 @@ h2 {
 .news__list {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 0;
 }
-.news hr {
+.news__item {
+  border-bottom: 1px solid hsl(236deg, 13%, 42%);
+  padding: 2em 0;
+}
+.news__item:last-child {
   border: none;
-  height: 1px;
-  width: 100%;
-  margin: 0 auto;
-  background-color: hsl(236deg, 13%, 42%);
+  padding-bottom: 0;
+}
+.news__item:first-child {
+  padding-top: 0;
 }
 
 .featured {
