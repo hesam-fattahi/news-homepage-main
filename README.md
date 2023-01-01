@@ -14,7 +14,7 @@ Users should be able to:
 
 ### Preview
 
-- [Live site URL](#)
+- [Live site URL](https://hesam-fattahi.github.io/news-homepage-main/)
 
 ### Built with
 
